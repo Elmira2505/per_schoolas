@@ -1,0 +1,50 @@
+/*
+There are no strict requirements for what your final page should look like,but here are some guidelines and suggestions to get you started: 
+1. Give the <body>a background-color. 
+2. Use a type selector to target the <h1>element. Center the text and give it a color. 
+3. Give the <img>a border and use margin to give it some space. 
+4. Use a type selector to target all <h2>elements and change their color. 
+5. Use an ID selector to target the #description div. Give it a padding and a border. 
+6. Use a class selector to target the .ingredients-section. Give it a background-color and padding. 
+7. Target the <li>elements within the .ingredients-section and change their color. 
+8. Target the <a>elements and change their color. Try to remove the underline as well. 
+9. Experiment with different font-family values for your headings and paragraphs. 
+10. Use the descendant combinator to target the <ul>inside the #more-recipes div and remove the bullet points.
+*/
+body {
+    background-color: rgb(179, 171, 171);
+}
+
+.title {
+    color: rgb(2, 2, 99);
+    text-align: center;
+}
+
+.image {
+    border: 1px solid darkblue;
+    margin: 8px;
+}
+
+.sub_title {
+    color: darkblue;
+}
+
+#description {
+    padding: 5px;
+    border: 2px outset lightgray;
+}
+
+.ingredients-section {
+    background-color: lightgray;
+    padding: 8px;
+}
+
+
+li {
+    color: blue;
+}
+
+#more-recipes ul {
+    color: rgb(39, 115, 6);
+    list-style: none;
+}
