@@ -1,0 +1,17 @@
+/* Add your external CSS here. */
+/* 
+You should see a width of 300px on the avatar and proportioned class. 
+You should give it a height so that it retains its original square proportions (don’t hardcode in a pixel value for the height !). 
+You should give the elements with both the avatar and distorted classes a width of 200px. 
+You should give it a height twice as big as it’s width.
+*/
+
+.avatar.proportioned {
+    width: 300px;
+    height: auto;
+}
+
+.avatar.distorted {
+    width: 200px;
+    height: width*2;
+}

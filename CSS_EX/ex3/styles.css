@@ -1,0 +1,21 @@
+/*
+You should see a black background and white text on the first button element.
+You should see a yellow background on the second button element. 
+You should set a font size of 28px using a selector list. 
+You should have a list of fonts containing Helvetica and Times New Roman with sans-serif as a fallback in the selector list. 
+You should see a unique class name on each element. You should have a selector list for styles that both elements share.
+*/
+
+.btn1 {
+    background-color: black;
+    color: white;
+}
+
+.btn2 {
+    background-color: yellow;
+}
+
+.list {
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+}
