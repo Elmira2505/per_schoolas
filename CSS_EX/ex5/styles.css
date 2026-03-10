@@ -5,3 +5,12 @@ You should see a font size of 20px for elements that are descendants of the div 
 You should center align text for elements that are descendants of the div element.
 */
 
+div p {
+    background-color: yellow;
+}
+
+div .text {
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}

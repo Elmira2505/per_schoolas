@@ -82,7 +82,9 @@ function playGame() {
 
 
     }
-    return (humanScore > computerScore) ? "You win the game!" : "You lost the game!"
+    if (humanScore === computerScore){
+        return "It's a tie the game!!!"
+    } else return (humanScore > computerScore) ? "You win the game!" : "You lost the game!"
 
 }
 
