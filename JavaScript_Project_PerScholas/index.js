@@ -20,24 +20,26 @@ function getComputerChoice(Array) {
 
 
 
-function getHumanChoice(humanChoice) {
+function getHumanChoice(numRound) {
 
-/*
-Create a function named getHumanChoice.
-Write the code so that getHumanChoice will return one of the valid choices depending on what the user inputs.
-    Hint: Use the prompt() method to get the user’s input.Take a look at the MDN documentation  for more information.
+    /*
+    Create a function named getHumanChoice.
+    Write the code so that getHumanChoice will return one of the valid choices depending on what the user inputs.
+        Hint: Use the prompt() method to get the user’s input.Take a look at the MDN documentation  for more information.
+    
+    Your game will keep track of the player’s score.You will write variables to keep track of the player’s score.
+    */
+    humanChoice = "";
+    while (!humanChoice) {
+        humanChoice = prompt(`Round ${numRound}! \nPlease enter "rock", "paper", or "scissors".`);
 
-Your game will keep track of the player’s score.You will write variables to keep track of the player’s score.
-*/  while (!humanChoice) {
-        humanChoice = prompt(`Round !/nPlease enter "rock", "paper", or "scissors".`);
-   
         //const humanChoiceToLower = humanChoice.toLowerCase()
-    console.log('humanChoice ', humanChoice)
-    if (humanChoice === null) {return "exit"};
-    if (humanChoice.toLowerCase() === hand[0] ||
-        humanChoice.toLowerCase() === hand[1] ||
-        humanChoice.toLowerCase() === hand[2] ) {
-        return humanChoice
+        console.log('humanChoice ', humanChoice)
+        if (humanChoice === null) { return "exit" };
+        if (humanChoice.toLowerCase() === hand[0] ||
+            humanChoice.toLowerCase() === hand[1] ||
+            humanChoice.toLowerCase() === hand[2]) {
+            return humanChoice
         } else humanChoice = ""
 
     }
@@ -48,7 +50,7 @@ Your game will keep track of the player’s score.You will write variables to ke
 
 /*🖐✌️✊ */
 
-function playRound(humanChoice, computerChoice,round) {
+function playRound(humanChoice, computerChoice) {
     const humanChoiceToLower = humanChoice.toLowerCase()
     if (humanChoiceToLower === computerChoice) {
         return "It's a tie!"
@@ -56,7 +58,7 @@ function playRound(humanChoice, computerChoice,round) {
         humanChoiceToLower === hand[1] && computerChoice === hand[2] ||
         humanChoiceToLower === hand[2] && computerChoice === hand[0]) {
         humanScore++;
-    
+
         return `You win! ${humanChoiceToLower} beats ${computerChoice}.`;
     } else {
         computerScore++;
@@ -69,15 +71,15 @@ function playGame() {
     for (let i = 1; i <= 3; i++) {
         computerChoice = getComputerChoice(hand);
         console.log('computerChoice - ', computerChoice);
-        humanChoice = getHumanChoice();
+        humanChoice = getHumanChoice(i);
         console.log('humanChoice - ', humanChoice)
-        if (humanChoice==="exit"){
+        if (humanChoice === "exit") {
             return "Game over";
         }
-        
+
         alert(playRound(humanChoice, computerChoice, i));
-        console.log('human score -', humanScore, '  computer score - ' , computerScore)
-      
+        console.log('human score -', humanScore, '  computer score - ', computerScore)
+
 
     }
     return (humanScore > computerScore) ? "You win the game!" : "You lost the game!"
