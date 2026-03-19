@@ -13,7 +13,6 @@ function increaseCount() {
 
 
 
-
 function resetCounter() {
     counter = 0;
     return element.textContent = counter
